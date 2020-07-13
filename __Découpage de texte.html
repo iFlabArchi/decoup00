@@ -1,0 +1,53 @@
+﻿<!doctype html><html><style>body{font-family:arial;}
+div{background-color:#efe; font-size:20px; height:50px;}
+#L2{color:red;} #L1{color:violet; font-size:12px;} 
+#L0{color:blue;font-size:12px;}
+#L5{color:green; text-transform:capitalize;} #L4{color:#ba0;} #L3{color:orange;}
+#ch{height:25px;}#ch,#bt{background-color:lightyellow;}
+input{width:300px;}
+</style><body><!-- 	=====<br><br>=======	 -->
+Tapez une liste.<br>
+<input id="ch" placeholder="Séparez par des points"
+value=
+"
+
+"
+><br>
+
+<!--
+Terminus Guédiawaye  . Sapeur Pompier Guédiawaye  . Sonatel Guédiawaye  . 
+Marché Peund Lansar  . Ecole Lansar(CEM Thiaroye Djiaddah Kao)  . 
+Tally Bou Bess  . Bountou Pikine  . Autoroute  . Cité des Eaux  . Station Castor  . 
+Jet d'eau  . Bourguiba  . Ecole Normale /Ecole Police  . Hôpital Fann  . 
+Terminus Cheikh Anta Diop UCAD
+ -->
+
+<button id="bt"onclick="decoup()">Découper</button><br><br>
+
+L0<div id="L0"></div>L1<div id="L1"></div>
+L2<div id="L2"></div>L3<div id="L3"></div>
+L4<div id="L4"></div>L5<div id="L5"></div>
+
+<script>
+				
+function decoup(){var x=document.getElementById("ch").value;
+document.getElementById("L0").innerHTML=x;
+var copie= document.getElementById("L0").innerHTML;
+document.getElementById("L1").innerHTML=copie;	
+var liste=copie.split(".");
+document.getElementById("L2").innerHTML=liste[6];	
+document.getElementById("L3").innerHTML=liste[12];	
+document.getElementById("L4").innerHTML=liste.length+" Elements";
+var aff="";
+for(i=0; i<liste.length; i++){aff+="arr_ "+liste[i]+"<br>";}
+
+document.getElementById("L5").innerHTML=aff+"<br><br><hr>";
+}
+/*
+document.getElementById("L7").innerHTML="";				
+document.getElementById("L8").innerHTML="";				
+document.getElementById("L9").innerHTML="";				
+document.getElementById("L10").innerHTML="";				
+*/
+</script></body></html>
+
